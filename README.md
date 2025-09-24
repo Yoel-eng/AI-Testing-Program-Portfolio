@@ -26,6 +26,7 @@ Preparation of use:
   > & .\venv\Scripts\python.exe0 .\main.py
 
 how to use:
+- in the start, you'd have to create quesiton first, or paste configuration given by your teacher/friend into configuration.txt, don't put any 2nd line, paste it, save it, close it.
 - The program starts with main.py (& .\venv\Scripts\python.exe0 .\main.py)
 - Program starts with asking the user for the encryption key, this will be used for both question maker mode and the test/learn mode.
 - if you have not pasted any configuration given by a teacher in configuration.txt, and want to create question, select for question maker mode
