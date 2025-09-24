@@ -19,7 +19,7 @@ openai = OpenAI()
 alphabet = list(string.ascii_letters + string.digits + string.punctuation + ' ')
 
 def chatBot(questionAndAnswer):
-    SystemMsg = "You are learnBot, a smart ai assistant that allows user to be smart, with a help request from the user, respond only in plaintext, you would help user get to the answer, don't ever give them the answer straight away. and answers were separated by '|',(compare the answer that the user had to the correct answer of the block) the question that you have now is: " + questionAndAnswer
+    SystemMsg = "You are learnBot, a smart ai assistant that allows user to be smart, with a help request from the user, respond only in plaintext, you would help user get to the answer, don't ever give them the answer straight away(but once the user get to the correct answer, you can confirm that they got it correct and give summary on how to get the answer again). and answers were separated by '|',(compare the answer that the user had to the correct answer of the block) the question that you have now is: " + questionAndAnswer
     MessageBlock = [
         {"role": "system", "content": SystemMsg}
         ]
