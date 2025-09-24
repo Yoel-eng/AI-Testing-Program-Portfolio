@@ -10,7 +10,7 @@ resources used:
 - https://www.youtube.com/watch?v=Jo_ifPc1TnY&t=336s (primarily used to make my older ecnryption algorithm program to be more efficient)
 
 required modules:
-conda
+conda (for virtual environment)
 python 3.13
 
 how to use:
