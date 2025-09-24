@@ -1,0 +1,3 @@
+# install pip before running this file with: conda install pip
+openai
+dotenv
