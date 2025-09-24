@@ -17,7 +17,8 @@ openai = OpenAI()
 alphabet = list(string.ascii_letters + string.digits + string.punctuation + ' ')
 
 def chatBot(questionAndAnswer):
-    SystemMsg = "You are learnBot, a smart ai assistant that allows user to be smart, with a help request from the user, respond only in plaintext, you would help user get to the answer, don't ever give them the answer straight away(but once the user get to the correct answer, you can confirm that they got it correct and give summary on how to get the answer again). and answers were separated by '|',(compare the answer that the user had to the correct answer of the block) the question that you have now is: " + questionAndAnswer
+    # to start talking to the chatbot, questionAndAnswer is string version of the question and answer of the computer readable list.
+    SystemMsg = "You are learnBot, a smart ai assistant that allows user to be smart, with a help request from the user, respond only in plaintext, you would help user get to the answer, don't ever give them the answer straight away. and answers were separated by '|',(compare the answer that the user had to the correct answer of the block) the question that you have now is: " + questionAndAnswer
     MessageBlock = [
         {"role": "system", "content": SystemMsg}
         ]
@@ -75,6 +76,7 @@ class vigenere:
 
 
 def base64_translator(string, type="normal"):
+    # translates text into base64
     string = string.encode("ascii")
     if type == "normal":
         string = base64.b64encode(string)
@@ -87,6 +89,7 @@ def base64_translator(string, type="normal"):
     return string.decode("ascii")
 
 def makeQuestions():
+    # This section is to create questions and after finishing, it will automatically save the following file inside requirements.txt
     print("\nfor the y/n question, say [y]if its spelled correctly \n[n]if it's wrong(you can redo the question/answer)\n\n" \
     "select [c] to make an answer correct and [w] to make it incorrect.\n")
     sectionList = []
@@ -118,12 +121,13 @@ def makeQuestions():
                 if correctOrWrong == "c":
                     temp = "true"
                 tempAnswers.append([userInput, temp])
-    # I just reuse finishMakingQuestions to lower the amount of variables needed.
+    # reusing finishMakingQuestions to lower the amount of variables needed.
     modes = input("test or learn mode(t/l): ")
     sectionList.append('test' if modes.lower() == 't' else 'learn')
     return sectionList
 
 def testOrLearnMode(sectionList):
+    # breaks down the sectionList to 2 lists, to store the mode and questions
     question = sectionList[:-1]
     mode = sectionList[-1]
     random.shuffle(question)
@@ -132,6 +136,7 @@ def testOrLearnMode(sectionList):
     allowChatBot = False
     correctAnswers = 0
     currentNumber = 1
+    # allow the chatbot be used if its learn mode.
     if mode == "test": 
         print("Test mode selected, write which answer (index of the number, starts from 1)")
     elif mode == "learn":
@@ -155,6 +160,7 @@ def testOrLearnMode(sectionList):
                 correctAnswers += 1
             else:
                 pass
+    #shows how many you got correct out of the amount of questions in question
     print(f"the {mode} mode has concluded, you gotten {correctAnswers} correct, out of {len(question)} ")
         
     
@@ -169,6 +175,7 @@ if __name__ == '__main__':
     userKey = input("Please put your key here(to encrypt/decrypt questions): ")
     configPath = os.path.abspath("configuration.txt")
     userKey = userKey.strip()
+    #initiate and creates new encryption program
     substitute1 = substitute(userKey)
     substitute2 = substitute(userKey)
     substitute3 = substitute(userKey)
@@ -206,6 +213,7 @@ if __name__ == '__main__':
                     configuration = reader.read().strip()
                 if configuration != '':
                     configuration = translator.stringToList(decrypt(configuration))
+                    # when translator stringToList detects that the configuration is incorrect/password is incorrect it will return a string of |E8572.sdgfu8SD+,e383
                     if configuration == "|E8572.sdgfu8SD+,e3834W|":
                         print("Invalid key/configuration.")
                     elif type(configuration) == list:
@@ -216,7 +224,7 @@ if __name__ == '__main__':
                 question = encrypt(translator.listToString(makeQuestions()))
                 with open(configPath, "w") as edit:
                     edit.write(question)
-                print("Please copy the content in the configuration file.")
+                print("Please copy the content in the configuration file and share it.")
             elif modeSelector.lower() == 'e':
                 running = False
                 print("Exitting Program...")
