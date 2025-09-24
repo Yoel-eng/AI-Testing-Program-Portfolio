@@ -1,7 +1,5 @@
 import random
 
-userList = [["quest1", [["Power", "true"], ["lower", "false"]]], ["quest2", [["Power", "true"], ["lower", "false"]]], "learn"]
-
 def listToString(list):
     finalString = ""
     for i in range(len(list)-1):
