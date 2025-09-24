@@ -19,7 +19,9 @@ Preparation of use:
 - remove the execution policy to unrestricted to allow enter the virtual env
   > Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
 - Then this to activate the virtual environment:
-  > venv\Scripts\Activate
+  > venv\Scripts\activate    (for Windows)
+  > source venv/bin/activate  (for Mac)
+- Don't forget to update pip installer
 - Then install the dependencies
   > pip install -r requirements.txt
 - run the program by running this command:
