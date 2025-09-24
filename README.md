@@ -20,12 +20,14 @@ Preparation of use:
   > Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
 - Then this to activate the virtual environment:
   > venv\Scripts\activate    (for Windows)
+  
   > source venv/bin/activate  (for Mac)
 - Don't forget to update pip installer
 - Then install the dependencies
   > pip install -r requirements.txt
 - run the program by running this command:
   > & .\venv\Scripts\python.exe0 .\main.py (for windows)
+  
   > python3 main.py (for Mac)
 
 how to use:
