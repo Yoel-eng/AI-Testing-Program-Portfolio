@@ -154,7 +154,6 @@ def testOrLearnMode(sectionList):
         else: 
             selectedAnswer = q[1][answerIndex]
             if selectedAnswer[1] == "true":
-                print(selectedAnswer)
                 correctAnswers += 1
             else:
                 pass
