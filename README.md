@@ -23,6 +23,8 @@ Preparation of use:
   > venv\Scripts\Activate
 - Then install the dependencies
   > pip install -r requirements.txt
+- run by running this command (replace absPathVenv with the full path in venv/Scripts/python.py and replace absPathCode with the full path of main.py and put them in separate quotes):
+  > & "absPathVenv" "absPathCode"
 
 how to use:
 - The program starts with main.py (python3 main.py)
