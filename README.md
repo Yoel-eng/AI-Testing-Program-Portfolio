@@ -10,7 +10,6 @@ resources used:
 - https://www.youtube.com/watch?v=Jo_ifPc1TnY&t=336s (primarily used to make my older ecnryption algorithm program to be more efficient)
 
 Prerequisites:
-- conda (for virtual environment)
 - python 3.13 (can be downloaded from Microsoft Store)
 - pip installer
 
@@ -24,10 +23,10 @@ Preparation of use:
 - Then install the dependencies
   > pip install -r requirements.txt
 - run by running this command (replace absPathVenv with the full path in venv/Scripts/python.py and replace absPathCode with the full path of main.py and put them in separate quotes):
-  > & "absPathVenv" "absPathCode"
+  > & .\venv\Scripts\python.exe0 .\main.py
 
 how to use:
-- The program starts with main.py (python3 main.py)
+- The program starts with main.py (& .\venv\Scripts\python.exe0 .\main.py)
 - Program starts with asking the user for the encryption key, this will be used for both question maker mode and the test/learn mode.
 - if you have not pasted any configuration given by a teacher in configuration.txt, and want to create question, select for question maker mode
 question maker mode allows the user to create questions, and after doing all of these, the question will be made into encrypted format in configuration.txt, in which users will share, program will not work if the key that has been set by students in the beginning doesn't matching to the same key that the maker of the question set.
