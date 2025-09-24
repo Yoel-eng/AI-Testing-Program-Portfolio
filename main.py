@@ -209,7 +209,6 @@ if __name__ == '__main__':
                     configuration = reader.read().strip()
                 if configuration != '':
                     configuration = translator.stringToList(decrypt(configuration))
-                    print(configuration)
                     if configuration == "|E8572.sdgfu8SD+,e3834W|":
                         print("Invalid key/configuration.")
                     elif type(configuration) == list:
