@@ -25,7 +25,8 @@ Preparation of use:
 - Then install the dependencies
   > pip install -r requirements.txt
 - run the program by running this command:
-  > & .\venv\Scripts\python.exe0 .\main.py
+  > & .\venv\Scripts\python.exe0 .\main.py (for windows)
+  > python3 main.py (for Mac)
 
 how to use:
 - everytime, starting a new one, don't forget to activate the virtual environment, then run the main.py
