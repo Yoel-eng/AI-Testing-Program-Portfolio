@@ -228,5 +228,5 @@ if __name__ == '__main__':
             elif modeSelector.lower() == 'e':
                 running = False
                 print("Exitting Program...")
-            else:
-                print("Invalid option, please select from the list.\n")
+        else:
+            print("Invalid option, please select from the list.\n")
