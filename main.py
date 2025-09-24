@@ -207,12 +207,15 @@ if __name__ == '__main__':
             if modeSelector.lower() == 't' or modeSelector.lower() == 'l':
                 with open(configPath, "r") as reader:
                     configuration = reader.read().strip()
-                configuration = translator.stringToList(decrypt(configuration))
-                print(configuration)
-                if configuration == "|E8572.sdgfu8SD+,e3834W|":
-                    print("Invalid key/configuration.")
-                elif type(configuration) == list:
-                    testOrLearnMode(configuration)
+                if configuration != '':
+                    configuration = translator.stringToList(decrypt(configuration))
+                    print(configuration)
+                    if configuration == "|E8572.sdgfu8SD+,e3834W|":
+                        print("Invalid key/configuration.")
+                    elif type(configuration) == list:
+                        testOrLearnMode(configuration)
+                else:
+                    print("No configuration found. Please paste in your config in configuration.txt or create questions!.")
             elif modeSelector.lower() == 'q':
                 question = encrypt(translator.listToString(makeQuestions()))
                 with open(configPath, "w") as edit:
