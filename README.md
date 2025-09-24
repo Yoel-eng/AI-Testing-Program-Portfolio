@@ -11,24 +11,21 @@ resources used:
 
 Prerequisites:
 - conda (for virtual environment)
-- python 3.13
+- python 3.13 (can be downloaded from Microsoft Store)
 - pip installer
 
 Preparation of use:
-
-- instal anaconda https://www.anaconda.com/download > follow the install guide
-- Add anaconda to Windows Terminal https://www.youtube.com/watch?v=AU2BUmwBnTw&t=1s
-- create a virtual environment inside the folder
-  > conda create -p venv python=3.13
-- activate the virtual environment
-  > conda activate venv
-- install pip into conda
-  > conda install pip
-- install the requirements
+- create a virtual environment inside the folder https://www.youtube.com/watch?v=JYdd1k44FRM
+  > python3 -m venv venv
+- remove the execution policy to unrestricted to allow enter the virtual env
+  > Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
+- Then this to activate the virtual environment:
+  > venv\Scripts\Activate
+- Then install the dependencies
   > pip install -r requirements.txt
 
 how to use:
-- The program starts with main.py
+- The program starts with main.py (python3 main.py)
 - Program starts with asking the user for the encryption key, this will be used for both question maker mode and the test/learn mode.
 - if you have not pasted any configuration given by a teacher in configuration.txt, and want to create question, select for question maker mode
 question maker mode allows the user to create questions, and after doing all of these, the question will be made into encrypted format in configuration.txt, in which users will share, program will not work if the key that has been set by students in the beginning doesn't matching to the same key that the maker of the question set.
