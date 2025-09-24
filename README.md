@@ -22,10 +22,11 @@ Preparation of use:
   > venv\Scripts\Activate
 - Then install the dependencies
   > pip install -r requirements.txt
-- run by running this command (replace absPathVenv with the full path in venv/Scripts/python.py and replace absPathCode with the full path of main.py and put them in separate quotes):
+- run the program by running this command:
   > & .\venv\Scripts\python.exe0 .\main.py
 
 how to use:
+- everytime, starting a new one, don't forget to activate the virtual environment, then run the main.py
 - in the start, you'd have to create quesiton first, or paste configuration given by your teacher/friend into configuration.txt, don't put any 2nd line, paste it, save it, close it.
 - The program starts with main.py (& .\venv\Scripts\python.exe0 .\main.py)
 - Program starts with asking the user for the encryption key, this will be used for both question maker mode and the test/learn mode.
