@@ -8,8 +8,6 @@ import string
 import base64
 import os
 
-# Ask Mr. Peavy/Hutchings
-
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 Model = "gpt-4o-mini"
