@@ -23,6 +23,7 @@ Preparation of use:
   
   > source venv/bin/activate  (for Mac)
 - Don't forget to update pip installer
+  > pip install --upgrade pip
 - Then install the dependencies
   > pip install -r requirements.txt
 - run the program by running this command:
