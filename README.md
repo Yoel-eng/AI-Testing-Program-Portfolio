@@ -7,7 +7,7 @@ This program powered with Python and OpenAI GPT infrastructure, key features:
 resources used:
 - https://www.youtube.com/watch?v=0eCMCk9Bstw&t=502s
 - https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?ranMID=39197&ranEAID=%2FjZHTpnCvx8&ranSiteID=_jZHTpnCvx8-HuW5j2CqBP7LDpY76KBPyA&utm_source=aff-campaign&LSNPUBID=%2FjZHTpnCvx8&utm_medium=udemyads&couponCode=MT250923G3
-- https://www.youtube.com/watch?v=Jo_ifPc1TnY&t=336s (primarily used to make my older ecnryption algorithm program to be more efficient)
+- https://www.youtube.com/watch?v=Jo_ifPc1TnY&t=336s (primarily used to make my older encryption algorithm program to be more efficient)
 
 Prerequisites:
 - python 3.13 (can be downloaded from Microsoft Store)
